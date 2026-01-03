@@ -48,7 +48,7 @@ The implementation strictly follows the protocol and rules defined in the assign
 
 ## File Structure
 ```text
-blackjack/
+Intro-to-Computer-Networks-2025-Hackathon/
 ├── server.py        # Server entry point
 ├── server_tcp.py    # TCP server + game handling
 ├── server_udp.py    # UDP offer broadcaster
