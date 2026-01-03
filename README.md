@@ -1,4 +1,4 @@
-# Intro to Computer Networks 2025 Hackaton
+# Intro to Nets 2025 Hackaton
 # Blackjack Client-Server 🃏
 
 ## Team Name
