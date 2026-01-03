@@ -1,4 +1,5 @@
-# Blackjack Client–Server (Intro to Networks Hackathon) 🃏
+# Intro to Computer Networks 2025 Hackaton
+# Blackjack Client-Server 🃏
 
 ## Team Name
 Casino del TCP
