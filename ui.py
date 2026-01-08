@@ -33,9 +33,7 @@ def c(text: str, code: str) -> str:
     return f"\033[{code}m{text}\033[0m"
 
 
-def suit_symbol(suit: int) -> str:
-    # Converts a suit index (0..3) to a Unicode card symbol;
-    return ["♥", "♦", "♣", "♠"][suit] if 0 <= suit < 4 else "?"
+
 
 
 def rank_str(rank: int) -> str:
