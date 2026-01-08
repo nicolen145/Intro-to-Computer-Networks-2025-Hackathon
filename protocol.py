@@ -92,6 +92,7 @@ def unpack_request(data: bytes):
 
     cookie, mtype, rounds, name_b = struct.unpack(REQUEST_FMT, data[:REQUEST_SIZE])
     if cookie != MAGIC_COOKIE or mtype != MSG_TYPE_REQUEST:
+        raise ValueError("invalid request")
         
 
     return rounds, unpack_name_32(name_b)
