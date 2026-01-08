@@ -186,16 +186,7 @@ def main():
         ip, tcp_port, server_name = listen_for_offer(timeout_sec=10.0)
         print(banner("Welcome to Casino del TCP! 🃏"))
         rounds = ask_rounds()
-        try:
-            play_session(ip, tcp_port, server_name, rounds)
-        except (socket.timeout, ConnectionError) as e:
-            print(f"[CLIENT] Connection issue: {e}")
-        except Exception as e:
-            print(f"[CLIENT] Error: {e}")
-
-        print("\n[CLIENT] Returning to listen for new offers...\n")
-        time.sleep(0.5)
-
+        
 
 if __name__ == "__main__":
     main()
