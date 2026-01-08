@@ -145,4 +145,19 @@ def start_tcp_server(server_name: str, host: str = "", port: int = 0):
     print(f"[SERVER] TCP listening on port {tcp_port}")
     return s, tcp_port
 
-#
+
+def accept_loop(server_socket: socket.socket, server_name: str, stop_event: threading.Event):
+    # Accepts incoming TCP connections and spawns a thread per client;
+    server_socket.settimeout(1.0)
+    while not stop_event.is_set():
+        try:
+            conn, addr = server_socket.accept()
+        except socket.timeout:
+            continue
+        t = threading.Thread(
+            target=handle_client,
+            args=(conn, addr, server_name),
+            daemon=True
+        )
+        t.start()
+
