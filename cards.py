@@ -27,7 +27,7 @@ class Card:
     def __str__(self) -> str:
         # Returns a short human-readable card representation;
         r = RANK_TO_STR.get(self.rank, str(self.rank))
-        s = SUITS[self.suit] if 0 <= self.suit < 4
+        s = SUITS[self.suit] if 0 <= self.suit < 4  else "?"
         return f"{r}{s}"
 
 
