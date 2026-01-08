@@ -4,8 +4,8 @@ import time
 from protocol import pack_offer
 
 # UDP Offer Broadcaster
-
 # This file handles periodic UDP broadcast of server offers.
+
 # The server advertises its availability so clients can discover it automatically.
 # Broadcasting runs in a separate thread and stops cleanly using a threading.Event.
 
