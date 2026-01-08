@@ -21,13 +21,13 @@ RANK_TO_STR = {
 
 @dataclass(frozen=True)
 class Card:
-    rank: int  # Card rank; 1..13;
-    suit: int  # Card suit index; 0..3;
+    rank: int  # Card rank: 1..13;
+    suit: int  # Card suit index: 0..3;
 
     def __str__(self) -> str:
         # Returns a short human-readable card representation;
         r = RANK_TO_STR.get(self.rank, str(self.rank))
-        s = SUITS[self.suit] if 0 <= self.suit < 4 else "?"
+        s = SUITS[self.suit] if 0 <= self.suit < 4
         return f"{r}{s}"
 
 
